@@ -9,7 +9,7 @@
     .container{
         display: block;
         margin: 60px auto;
-        height: 500px;
+        height: 600px;
         width: 390px;
         border: 1px solid black;
         border-radius: 20px;
@@ -22,6 +22,32 @@
         margin: 0px auto;
         height: 300px;
     }
+    .description{
+        text-align: center;
+    }
+    .price{
+      text-align: center;
+    }
+    .sing-container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .sing{
+    height: 20px;
+    }
+    .num{
+        font-size: 30px;
+        margin: 0px 45px;
+    }
+    .btn{
+        display: block;
+     margin: 10px auto;
+     width: 40%;
+     font-size: 20px;
+     padding: 5px;
+     border-radius: 20px;
+    }
     
 </style>
 <body>
@@ -29,7 +55,15 @@
     <h1 class="heading"> Cotton Shirts </h1>
     <div class="img-container">
     <img src="shirt.png" class="img">
-</div>
+    </div>
+    <p class="description">A cotton shirt full of comfort, if you wear it you fill comfortable and look cool</p>
+    <h2 class="price"> Price:499</h2>
+   <div class="sing-container">
+    <img src="plus.png" class="sing">
+    <span class="num">1</span>
+    <img src="minus-sign.png" class="sing">
+   </div>
+<button class="btn">Add to Cart </button>
    </div> 
 </body>
 </html>
