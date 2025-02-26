@@ -35,6 +35,7 @@
     }
     .sing{
     height: 20px;
+    cursor: pointer;
     }
     .num{
         font-size: 30px;
@@ -59,11 +60,33 @@
     <p class="description">A cotton shirt full of comfort, if you wear it you fill comfortable and look cool</p>
     <h2 class="price"> Price:499</h2>
    <div class="sing-container">
-    <img src="plus.png" class="sing">
-    <span class="num">1</span>
-    <img src="minus-sign.png" class="sing">
+    <img src="plus.png" class="sing" onclick="increase()">
+    <span class="num" id="quantity-text">1</span>
+    <img src="minus-sign.png" class="sing" onclick="decrease()">
    </div>
 <button class="btn">Add to Cart </button>
    </div> 
+   <script>
+    const quantityText=document.getElementById("quantity-text");
+function increase(){
+    let quantity=parseInt(quantityText.innerText)
+    if(quantity<10){
+    quantityText.innerText=++quantity;
+} else{
+    alert("you can't increase quantity more than 10")
+}
+}
+function decrease(){
+    let quantity=parseInt(quantityText.innerText)
+    if(quantity>1){
+    quantityText.innerText=--quantity;
+}
+else{
+    alert("you cant decrease quantity less than 1")
+}
+}
+    
+   </script>
 </body>
+
 </html>
